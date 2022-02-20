@@ -14,5 +14,5 @@ public class IndexController {
         System.out.println("In Index Contoller");
         return getIndexPage;
     }
-    //wip
+    //
 }
