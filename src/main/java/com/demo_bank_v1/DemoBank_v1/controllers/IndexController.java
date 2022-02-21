@@ -23,13 +23,6 @@ public class IndexController {
         return getLoginPage;
     }
 
-    @GetMapping("/register")
-    public ModelAndView getRegister() {
-        ModelAndView getRegisterPage = new ModelAndView("register");
-        System.out.println("In Register page");
-        getRegisterPage.addObject("PageTitle","Register");
-        return getRegisterPage;
-    }
 
     @GetMapping("/error")
     public ModelAndView getError() {
@@ -37,6 +30,14 @@ public class IndexController {
         getErrorPage.addObject("PageTitle", "Errors");
         System.out.println("In Error Page Controller");
         return getErrorPage;
+    }
+
+    @GetMapping("/verify")
+    public ModelAndView getVerify() {
+        ModelAndView getVerifyPage = new ModelAndView("login");
+        getVerifyPage.addObject("PageTitle","Verify");
+        System.out.println("In Verify Page Controller");
+        return getVerifyPage;
     }
 
 }
